@@ -8,8 +8,8 @@ import ToggleButton from '@/pages/components/ToggleButton'
 
 const ButtonFun: NextPage = () => {
   return (
-    <div className='flex h-screen flex-col items-center justify-center bg-[#F9F9F9]'>
-      <div className='space-y-2'>
+    <div className='flex h-screen justify-center  items-center bg-[#F9F9F9]'>
+      <div className='space-y-3 border b-black rounded-lg p-10'>
         <div className='flex items-center justify-center gap-2'>
           <Button leadingIcon={<ClapperBoard />}>Add media</Button>
           <SwitchButton />

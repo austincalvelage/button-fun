@@ -25,7 +25,7 @@ const SwitchButton = ({ isOn }: Props): JSX.Element => {
       <button
         onClick={sliderHandler}
         className={cn(
-          'relative flex h-[16px] w-[30px] items-center justify-center rounded-full p-px',
+          'relative flex h-[20px] w-[36px] items-center justify-center rounded-full p-px',
           // 'before:h-full before:w-1/2 before:bg-gradient-to-br before:from-[#28bf98] before:via-[#25e8b9] before:to-[#FFFFFF] before:rounded-tl-full before:rounded-bl-full',
           // 'after:h-full after:w-1/2 after:bg-gradient-to-bl after:from-[#999999] after:via-[#afafaf] after:to-[#FFFFFF] after:rounded-tr-full after:rounded-br-full'
           {
@@ -36,9 +36,9 @@ const SwitchButton = ({ isOn }: Props): JSX.Element => {
       >
         <span
           className={cn(
-            'absolute z-[3] flex h-[17px] w-[17px] items-center justify-center rounded-full bg-gradient-to-b from-[#E0E0E0] to-[#FFFFFF] p-px shadow-lg transition-transform ease-linear',
-            { 'translate-x-[-7px]': switchState },
-            { 'translate-x-[7px]': !switchState },
+            'absolute z-[3] flex h-[21px] w-[21px] items-center justify-center rounded-full bg-gradient-to-b from-[#E0E0E0] to-[#FFFFFF] p-px shadow-lg transition-transform ease-linear',
+            { 'translate-x-[-8px]': switchState },
+            { 'translate-x-[8px]': !switchState },
             'before:relative before:h-full before:w-full before:rounded-full before:bg-[#EAEAEA]'
           )}
         />
