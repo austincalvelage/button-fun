@@ -23,7 +23,7 @@ const Button = ({ children, leadingIcon, iconOnly, isStickyButton }: Props): JSX
   }
 
   return (
-    <div className='rounded-[14px] bg-gradient-to-b from-[#EFEFEF] to-[#FFFFFF] p-1 shadow-[inset_0_1px_1px_rgb(0_0_0_/_0.02),_0_8px_16px_rgb(0_0_0_/_0.02)]'>
+    <div className='rounded-[14px] bg-gradient-to-b from-[#EFEFEF] to-[#FFFFFF] p-1 shadow-[inset_0_1px_1px_rgb(0_0_0_/_0.02),_0_8px_16px_rgb(0_0_0_/_0.02)] select-none'>
       <button
         onMouseDown={clickDown}
         onMouseUp={() => up()}
