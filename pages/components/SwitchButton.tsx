@@ -20,7 +20,7 @@ const SwitchButton = () => {
             ? `linear-gradient(180deg, rgba(142,238,207,1) 0%, rgba(37,232,185,1) 50%, rgba(255,255,255,1) 100%)`
             : `linear-gradient(180deg, rgba(170,170,170,1) 0%, rgba(175,175,175,1) 50%, rgba(255,255,255,1) 100%)`,
         }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.3 }}
         onClick={() => setIsOn(!isOn)}
         className={cn('relative flex h-[20px] w-[36px] items-center rounded-full transition-shadow', {
           'justify-end shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
