@@ -14,13 +14,18 @@ const SwitchButton = () => {
 
   return (
     <div className='rounded-full bg-gradient-to-b from-[#EFEFEF] to-[#FFFFFF] p-1 shadow-[inset_0_1px_1px_rgb(0_0_0_/_0.02),_0_8px_16px_rgb(0_0_0_/_0.02)] select-none'>
-      <button
+      <motion.button
+        animate={{
+          background: isOn
+            ? `linear-gradient(180deg, rgba(142,238,207,1) 0%, rgba(37,232,185,1) 50%, rgba(255,255,255,1) 100%)`
+            : `linear-gradient(180deg, rgba(170,170,170,1) 0%, rgba(175,175,175,1) 50%, rgba(255,255,255,1) 100%)`,
+        }}
+        transition={{ duration: 0.4 }}
         onClick={() => setIsOn(!isOn)}
-        className={cn('relative flex h-[20px] w-[36px] items-center rounded-full transition duration-300', {
-          'bg-[#8EEECF] saturate-150 justify-end shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
+        className={cn('relative flex h-[20px] w-[36px] items-center rounded-full transition-shadow', {
+          'justify-end shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
             isOn,
-          'bg-[#afafaf] shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)] justify-start':
-            !isOn,
+          'shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)] justify-start': !isOn,
         })}
       >
         <motion.span
@@ -37,7 +42,7 @@ const SwitchButton = () => {
             }
           )}
         />
-      </button>
+      </motion.button>
     </div>
   )
 }
