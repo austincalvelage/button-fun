@@ -9,7 +9,7 @@ type Props = {
   isMaintained?: boolean
 }
 
-const Button = ({ children, leadingIcon, iconOnly, isMaintained }: Props): JSX.Element => {
+const Button = ({ children, leadingIcon, iconOnly, isMaintained }: Props) => {
   const [clicked, setClicked] = useState(false)
 
   const [down] = useSound('./sounds/click1.mp3', {

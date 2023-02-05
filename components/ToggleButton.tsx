@@ -5,7 +5,7 @@ import useSound from 'use-sound'
 type Props = {
   isMaintained?: boolean
 }
-const ToggleButton = ({ isMaintained }: Props): JSX.Element => {
+const ToggleButton = ({ isMaintained }: Props) => {
   const [clicked, setClicked] = useState(false)
 
   const [down] = useSound('./sounds/click1.mp3', {
