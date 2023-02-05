@@ -16,10 +16,10 @@ const SwitchButton = () => {
     <div className='rounded-full bg-gradient-to-b from-[#EFEFEF] to-[#FFFFFF] p-1 shadow-[inset_0_1px_1px_rgb(0_0_0_/_0.02),_0_8px_16px_rgb(0_0_0_/_0.02)] select-none'>
       <button
         onClick={() => setIsOn(!isOn)}
-        className={cn('relative flex h-[20px] w-[36px] items-center rounded-full transition-shadow', {
-          'bg-gradient-to-b from-[#8EEECF] via-[#25e8b9] to-[#FFFFFF] justify-end shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
+        className={cn('relative flex h-[20px] w-[36px] items-center rounded-full transition duration-[300ms]', {
+          'bg-[#8EEECF] justify-end shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
             isOn,
-          'bg-gradient-to-b from-[#AAAAAA] via-[#afafaf] to-[#FFFFFF] shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)] justify-start':
+          'bg-[#afafaf] shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)] justify-start':
             !isOn,
         })}
       >
