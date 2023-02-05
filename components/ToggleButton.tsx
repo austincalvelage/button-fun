@@ -30,7 +30,7 @@ const ToggleButton = ({ isMaintained }: Props) => {
           {
             'shadow-[0px_-1px_1px_rgb(0_0_0_/_0.02),_0px_0px_0px_0.5px_rgb(0_0_0_/_0.02),_0px_1px_2px_rgb(0_0_0_/_0.2),_0px_1px_2px_1px_rgb(0_0_0_/_0.2)] before:inset-1 after:inset-1 after:rounded-[6px] after:opacity-60':
               !clicked || !isMaintained,
-            'shadow-[0px_0px_0px_0.5px_rgb(0_0_0_/_0.015),_0px_1px_2px_rgb(0_0_0_/_0.25)] before:inset-0.5 before:rounded-[8px] after:inset-[1px] after:rounded-[9px] after:opacity-100':
+            'shadow-[0px_0px_0px_0.5px_rgb(0_0_0_/_0.015),_0px_1px_2px_rgb(0_0_0_/_0.25)] before:inset-0.5 before:rounded-[8px] after:inset-0.5 after:rounded-[9px] after:opacity-100':
               clicked && isMaintained,
           },
           {
