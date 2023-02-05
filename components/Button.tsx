@@ -28,7 +28,7 @@ const Button = ({ children, leadingIcon, iconOnly, isMaintained }: Props) => {
         onMouseDown={clickDown}
         onMouseUp={() => up()}
         className={cn(
-          'relative h-[38px] items-center justify-center rounded-[10px] bg-gradient-to-b from-[#FFFFFF] to-[#ECECEC] px-3.5 text-sm font-semibold transition',
+          'relative h-[38px] items-center justify-center rounded-[10px] bg-gradient-to-b from-[#FFFFFF] to-[#ECECEC] px-3.5 text-sm font-semibold transition appearance-none',
           'before:absolute before:rounded-[6px] before:bg-[#FFFFFF] before:transition-[inset]',
           'after:absolute after:bg-gradient-to-b after:from-[#EAEAEA] after:to-[#F8F8F8] after:transition-[inset]',
           { 'w-[38px]': iconOnly },

@@ -24,7 +24,7 @@ const ToggleButton = ({ isMaintained }: Props) => {
         onMouseDown={clickDown}
         onMouseUp={() => up()}
         className={cn(
-          'group relative flex h-[72px] w-[72px] items-center justify-center rounded-[10px] bg-gradient-to-b from-[#FFFFFF] to-[#ECECEC] text-sm font-semibold transition',
+          'group relative flex h-[72px] w-[72px] items-center justify-center rounded-[10px] bg-gradient-to-b from-[#FFFFFF] to-[#ECECEC] text-sm font-semibold transition appearance-none',
           'before:absolute before:rounded-[6px] before:bg-[#FFFFFF] before:transition-[inset]',
           'after:absolute after:bg-gradient-to-b after:from-[#EAEAEA] after:to-[#F8F8F8] after:transition-[inset]',
           {

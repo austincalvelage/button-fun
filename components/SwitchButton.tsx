@@ -31,7 +31,7 @@ const SwitchButton = ({ handleToggle, isDefaultChecked }: Props) => {
       <button
         onClick={handleClick}
         className={cn(
-          'relative flex h-[20px] w-[36px] items-center rounded-full transition duration-1000 bg-gradient-to-b from-[#AAAAAA] via-[#afafaf] to-[#FFFFFF] shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)]',
+          'relative flex h-[20px] w-[36px] items-center rounded-full transition duration-1000 bg-gradient-to-b from-[#AAAAAA] via-[#afafaf] to-[#FFFFFF] shadow-[inset_0px_0px_8px_rgb(0_0_0_/_0.2),_inset_0px_1px_1px_0.5px_rgb(0_0_0_/_0.1)] appearance-none',
           'before:transition-opacity before:duration-200 before:absolute before:rounded-full before:inset-0 before:bg-gradient-to-b before:from-[#8EEECF] before:via-[#25e8b9] before:to-[#FFFFFF] before:shadow-[inset_0px_0px_8px_rgb(87_181_148_/_0.8),_inset_0px_1px_1px_0.5px_rgb(87_181_148_/_0.3),_0px_0px_4px_rgb(110_229_187_/_0.75)]',
           {
             'justify-end before:opacity-100': isOn,
