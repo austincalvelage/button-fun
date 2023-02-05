@@ -29,7 +29,7 @@ const ButtonFun: NextPage = () => {
               <ClapperBoard />
             </Button>
           </div>
-          <SwitchButton isOn />
+          <SwitchButton />
         </div>
       </div>
     </div>
