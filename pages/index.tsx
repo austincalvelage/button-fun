@@ -70,7 +70,7 @@ const Home: NextPage = () => {
             <p>
               Hiring?{' '}
               <a href='mailto:austin.calvelage@icloud.com' className='text-blue-500'>
-                Get in Touch!
+                Get in touch!
               </a>
             </p>
           </div>
