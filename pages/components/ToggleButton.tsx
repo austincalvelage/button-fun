@@ -30,7 +30,7 @@ const ToggleButton = ({ isStickyButton }: Props): JSX.Element => {
           {
             'shadow-[0px_-1px_1px_rgb(0_0_0_/_0.02),_0px_0px_0px_0.5px_rgb(0_0_0_/_0.02),_0px_1px_2px_rgb(0_0_0_/_0.2),_0px_1px_2px_1px_rgb(0_0_0_/_0.2)] before:inset-1 after:inset-1 after:rounded-[6px] after:opacity-60':
               !clicked,
-            'shadow-[0px_0px_0px_0.5px_rgb(0_0_0_/_0.015),_0px_1px_2px_rgb(0_0_0_/_0.2)] before:inset-0.5 before:rounded-[8px] after:inset-[1px] after:rounded-[9px] after:opacity-100':
+            'shadow-[0px_0px_0px_0.5px_rgb(0_0_0_/_0.015),_0px_1px_2px_rgb(0_0_0_/_0.25)] before:inset-0.5 before:rounded-[8px] after:inset-[1px] after:rounded-[9px] after:opacity-100':
               clicked,
           },
           {
@@ -43,12 +43,15 @@ const ToggleButton = ({ isStickyButton }: Props): JSX.Element => {
       >
         <span
           className={cn(
-            'relative z-[3] flex h-[42px] w-[42px] items-center justify-center rounded-full bg-gradient-to-b from-[#E0E0E0] to-[#FFFFFF] p-px',
-            'before:relative before:h-full before:w-full before:rounded-full before:bg-[#EAEAEA]',
-            'after:absolute after:h-[6px] after:w-[6px] after:rounded-full after:bg-gradient-to-b after:from-[#26b793] after:via-[#50efc8] after:to-[#FFFFFF]',
+            'absolute z-[3] inset-2 rounded-full bg-[#FFFFFF] flex items-center justify-center',
+            'before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-[#F1F1F1] before:to-[#EEEEEE] before:shadow-[0px_1px_0px_rgb(255_255_255_/_0.8),_inset_0px_1px_0px_rgb(0_0_0_/_0.05),_inset_0px_0px_10px_rgb(0_0_0_/_0.025)]',
+            'after:absolute after:h-2 after:w-2 after:rounded-full after:transition',
+            'active:after:!bg-[#8EEECF] active:after:!saturate-150 active:after:!shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_1px_1px_rgb(0_0_0_/_0.1),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025),_0px_0px_4px_rgb(110_229_187_/_0.75)]',
             {
-              'after:bg-gradient-to-b after:from-[#26b793] after:via-[#50efc8] after:to-[#FFFFFF]': clicked,
-              'after:bg-gradient-to-b after:from-[#919191] after:via-[#b3b3b3] after:to-[#FFFFFF]': !clicked,
+              'after:bg-[#8EEECF] after:saturate-150 after:shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_1px_1px_rgb(0_0_0_/_0.1),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
+                clicked,
+              'after:bg-[#EEEEEE] after:shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_3px_3px_rgb(0_0_0_/_0.25),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025)]':
+                !clicked,
             }
           )}
         ></span>
