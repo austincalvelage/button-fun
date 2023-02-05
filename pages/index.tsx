@@ -5,35 +5,53 @@ import ClapperBoard from '@/pages/components/ClapperBoard'
 import Button from '@/pages/components/Button'
 import SwitchButton from '@/pages/components/SwitchButton'
 import ToggleButton from '@/pages/components/ToggleButton'
+import Div100vh from 'react-div-100vh'
+import { AnimatePresence, motion } from 'framer-motion'
 
-const ButtonFun: NextPage = () => {
+const Home: NextPage = () => {
+  const [isMaintained, setIsMaintained] = useState(true)
   return (
-    <div className='flex h-screen justify-center  items-center bg-[#F9F9F9]'>
+    <Div100vh className='flex items-center justify-center'>
       <div className='space-y-3'>
-        <div className='flex items-center justify-center gap-2'>
-          <Button isStickyButton leadingIcon={<ClapperBoard />}>
+        <div className='flex justify-between font-medium'>
+          <AnimatePresence mode='popLayout' initial={false}>
+            {isMaintained ? (
+              <motion.h3
+                key={1}
+                initial={{ opacity: 0, x: 24 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 24, transition: { duration: 0.1 } }}
+              >
+                Maintained
+              </motion.h3>
+            ) : (
+              <motion.h3
+                key={2}
+                initial={{ opacity: 0, x: 24 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 24, transition: { duration: 0.1 } }}
+              >
+                Momentary
+              </motion.h3>
+            )}
+          </AnimatePresence>
+          <SwitchButton handleToggle={(value) => setIsMaintained(value)} isDefaultChecked={isMaintained} />
+        </div>
+        <hr />
+        <div className='flex gap-3'>
+          <Button isMaintained={isMaintained} leadingIcon={<ClapperBoard />}>
             Add media
           </Button>
-          <SwitchButton />
+          <Button iconOnly isMaintained={isMaintained}>
+            <ClapperBoard />
+          </Button>
         </div>
-        <div className='flex items-center justify-between'>
-          <ToggleButton isStickyButton />
-          <ToggleButton isStickyButton />
-        </div>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-4'>
-            <Button iconOnly>
-              <ClapperBoard />
-            </Button>
-            <Button iconOnly isStickyButton>
-              <ClapperBoard />
-            </Button>
-          </div>
-          <SwitchButton />
+        <div>
+          <ToggleButton isMaintained={isMaintained} />
         </div>
       </div>
-    </div>
+    </Div100vh>
   )
 }
 
-export default ButtonFun
+export default Home
