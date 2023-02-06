@@ -49,9 +49,9 @@ const ToggleButton = ({ isMaintained }: Props) => {
             'active:after:!bg-[#8EEECF] active:after:!saturate-150 active:after:!shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_1px_1px_rgb(0_0_0_/_0.1),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025),_0px_0px_4px_rgb(110_229_187_/_0.75)]',
             {
               'after:bg-[#8EEECF] after:saturate-150 after:shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_1px_1px_rgb(0_0_0_/_0.1),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025),_0px_0px_4px_rgb(110_229_187_/_0.75)]':
-                clicked,
+                clicked || isMaintained,
               'after:bg-[#EEEEEE] after:shadow-[0px_1px_0px_rgb(255_255_255_/_0.6),_inset_0px_3px_3px_rgb(0_0_0_/_0.25),_inset_0px_1px_0px_rgb(0_0_0_/_0.08),_inset_0px_0px_10px_rgb(0_0_0_/_0.025)]':
-                !clicked,
+                !clicked || !isMaintained,
             }
           )}
         ></span>
